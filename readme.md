@@ -18,7 +18,7 @@ Install Octokit:
 ### Download code to learn from Github
 
     $ cd code
-    $ ./downloadCodeFromGithub.rb
+    $ ./downloadCodeFromGithub.rb 10000 Ruby
 
 
 
