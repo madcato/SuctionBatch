@@ -24,6 +24,9 @@ Change extension to txt
 
     $ find . -name *.rb -exec mv {} {}.txt \;
 
+You must create three directories: 'train', 'test', 'valid' and distribute the codes in them.
+
+
 ## transformer-lm adaptation
 
 - [Transformer language model (GPT-2) with sentencepiece tokenizer](https://github.com/lopuhin/transformer-lm#id1)
@@ -33,7 +36,7 @@ Change extension to txt
 Change directory to:
 
     $ cd transformer-lm
-
+cd 
 Configure project:
 
     $ pip3 install -r requirements.txt
@@ -61,6 +64,14 @@ This step generates files:
 ### Train model
 
     $ gpt-2 run-root ../code/data/ruby_small/encoded ../code/data/ruby_small/ruby_small-model.model
+
+On Bolt with GPU:
+
+gpt-2 run-root ../code/data/encoded ../code/data/swift1-model.model --batch-size 2 --g-accum-gradients 1 --n_ctx 400
+
+## Try!
+
+    $ gpt-2-gen run-root "def uri_for page"
 
 # GPT2 
 
