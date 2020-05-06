@@ -21,9 +21,11 @@ Install Octokit:
     $ ./downloadCodeFromGithub.rb 10000 Ruby
 
 
-# GPT2 PyTorch
+# GPT2 
 
-- [Simple Text-Generator with OpenAI gpt-2 Pytorch Implementation](https://github.com/graykode/gpt-2-Pytorch) w24 s477 f100
+- [Transformer language model (GPT-2) with sentencepiece tokenizer](https://github.com/lopuhin/transformer-lm#id1)
+- [Code for the paper "Language Models are Unsupervised Multitask Learners"](https://github.com/nshepperd/gpt-2)
+- [How To Make Custom AI-Generated Text With GPT-2](https://minimaxir.com/2019/09/howto-gpt2/)
 - [Transformers: State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch.](https://github.com/huggingface/transformers) w547 s26.1 f6.2
 
 # Doc
