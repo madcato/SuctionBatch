@@ -22,6 +22,8 @@ from .fire_utils import only_allow_defined_args, get_defined_args
 from .model import Model, HParams
 from .inference import fixed_state_dict
 
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 def main(
         run_path,
@@ -128,6 +130,9 @@ def main(
     else:
         device = torch.device('cpu')
     model = Model(hparams).to(device)
+    ########################################################################
+    print(count_parameters(model))
+    ########################################################################
     cross_entropy = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=lr)
     loss_meter = AverageMeter()
