@@ -60,6 +60,7 @@ def sp_train():
         f'--unk_piece={UNK}',
         f'--control_symbols={END_OF_LINE},{END_OF_TEXT}',
         f'--character_coverage={args.character_coverage}',
+        f'--hard_vocab_limit=false',
     ]))
 
 

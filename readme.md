@@ -20,6 +20,47 @@ Install Octokit:
     $ cd code
     $ ./downloadCodeFromGithub.rb 10000 Ruby
 
+Change extension to txt
+
+    $ find . -name *.rb -exec mv {} {}.txt \;
+
+## transformer-lm adaptation
+
+- [Transformer language model (GPT-2) with sentencepiece tokenizer](https://github.com/lopuhin/transformer-lm#id1)
+
+### Prepare data fro training
+
+Change directory to:
+
+    $ cd transformer-lm
+
+Configure project:
+
+    $ pip3 install -r requirements.txt
+    $ python3 setup.py develop
+
+
+Train:
+
+    $ sp-train ../code/data/ruby_small ruby_small.txt ../code/data/ruby_small/ruby_small-model
+
+This generate files:
+- transformer-lm/ruby_small.txt  -> Can be deleted
+- code/data/ruby_small/ruby_smal-encoded.model
+- code/data/ruby_small/ruby_smal-encoded.vocab
+
+Encode:
+
+    $ sp-encode ../code/data/ruby_small ../code/data/ruby_small/ruby_small-model.model ../code/data/ruby_small/encoded
+
+This step generates files: 
+- Saving encoded split train to ../code/data/ruby_small/encoded/train.npy
+- Saving encoded split valid to ../code/data/ruby_small/encoded/valid.npy
+- Saving encoded split test to ../code/data/ruby_small/encoded/test.npy
+
+### Train model
+
+    $ gpt-2 run-root ../code/data/ruby_small/encoded ../code/data/ruby_small/ruby_small-model.model
 
 # GPT2 
 
