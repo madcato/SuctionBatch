@@ -85,3 +85,47 @@ gpt-2 run-root ../code/data/encoded ../code/data/swift1-model.model --batch-size
 - [Documentation for Ruby: 2.7.0](https://docs.ruby-lang.org/en/2.7.0/)
 - [Ruby stdlib: 2.7.0](https://ruby-doc.org/stdlib-2.7.1/)
 - [Ruby core: 2.7.1](https://ruby-doc.org/core-2.7.1/)
+
+# sqlite3
+
+## Build sqlite3 with R-Tree
+
+    $ ./configure --enable-rtree
+    $ make
+
+## Usage of R-Tree
+
+- [The SQLite R*Tree Module](https://www.sqlite.org/rtree.html)
+
+### Create table
+
+    CREATE VIRTUAL TABLE <name> USING rtree(<column-names>);
+
+This create four tables.
+
+Sample:
+
+    CREATE VIRTUAL TABLE demo_index USING rtree(
+       id,              -- Integer primary key
+       minX, maxX,      -- Minimum and maximum X coordinate
+       minY, maxY       -- Minimum and maximum Y coordinate
+    );
+
+Insert data:
+
+    INSERT INTO demo_index VALUES(
+        1,                   -- Primary key -- SQLite.org headquarters
+        -80.7749, -80.7747,  -- Longitude range
+        35.3776, 35.3778     -- Latitude range
+    );
+    INSERT INTO demo_index VALUES(
+        2,                   -- NC 12th Congressional District in 2010
+        -81.0, -79.6,
+        35.0, 36.2
+    );
+
+Query: 
+
+    SELECT id FROM demo_index
+     WHERE minX>=-81.08 AND maxX<=-80.58
+       AND minY>=35.00  AND maxY<=35.44;
