@@ -129,3 +129,12 @@ Query:
     SELECT id FROM demo_index
      WHERE minX>=-81.08 AND maxX<=-80.58
        AND minY>=35.00  AND maxY<=35.44;
+
+Use a circle to query: 
+
+    SELECT id FROM demo_index WHERE id MATCH circle(45.3, 22.9, 5.0)
+
+circle inposition x: 45.3 y: 22.9 radius: 5.0
+
+
+ 
