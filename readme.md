@@ -142,3 +142,5 @@ circle inposition x: 45.3 y: 22.9 radius: 5.0
 Este submodulo es una adaptación de un transformador BERT para detectar frases tóxicas.
 
     $ git submodule add git@github.com:madcato/transformers.git
+
+La técnica que presenta este repositorio es usar un modelo BERT, adaptando sus salidas y entradas para resolver un problema de clasificación, para el que originalmente no estaba entrenado.
