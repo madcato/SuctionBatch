@@ -137,4 +137,8 @@ Use a circle to query:
 circle inposition x: 45.3 y: 22.9 radius: 5.0
 
 
- 
+# Submodulo transformers
+
+Este submodulo es una adaptación de un transformador BERT para detectar frases tóxicas.
+
+    $ git submodule add git@github.com:madcato/transformers.git
