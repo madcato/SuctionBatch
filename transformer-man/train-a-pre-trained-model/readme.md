@@ -8,8 +8,9 @@ The texts to train this model are `man` command help texts. To find this files s
 
 ## Install 
 
+    $ pip3 install tensorflow-gpu==2.0.0
     $ pip3 install transformers
-    $ pip3 isntall tensorflow_datasets
+    $ pip3 install tensorflow_datasets
     $ pip3 install pytorch-pretrained-bert
 
 ## Configure
