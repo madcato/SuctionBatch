@@ -148,3 +148,5 @@ La técnica que presenta este repositorio es usar un modelo BERT, adaptando sus 
 # Transformer-man
 
 Este proyecto es una investigación para ver cómo resolver el problema de **Q&A** en el contexto de ayuda de Linux (la utilidad `man`). Quizá se pueda presentar el problema como **Q&A** o como **translate** u otro sistemas. También hay que investigar cómo enseñar los manuales de `man`: una opción es entrenar de cero un BERT, otra sería reentrenar el BERT con los manuales(añadir más textos al modelo), la otra opción sería meter los manuales como entrada de la pregunta (esto requeriría detectar en un paso previo qué manual requiere la pregunta)
+
+Este repo es un **BERT** implementado en **C++** portable -> [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)

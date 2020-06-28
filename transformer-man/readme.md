@@ -4,6 +4,8 @@ Este proyecto es una investigación para ver cómo resolver el problema de **Q&A
 
 ## Datos para entrenar 
 
+#### En macOs
+
 Ejecutar `$ man man` para buscar el archivo de configuración de man. (En macOS está en `/private/etc/man.conf`)
 
 Directories are:
@@ -13,7 +15,10 @@ Directories are:
     MANPATH /usr/X11/man
     MANPATH /Library/Apple/usr/share/man
 
+#### En Linux
 
+    $ cp -r /usr/share/man/* .
+ 
 ## Opciones a probar
 
 ### Adaptaciones del model
