@@ -200,3 +200,7 @@ Este proyecto merece la pena estudiarlo, al menos por su red neural en c++ (si r
 [facebookresearch/StarSpace](https://github.com/facebookresearch/StarSpace)
 
 Require boost
+
+# Fine-tuning BERT
+
+In directory *./fine-tuning* there are 5 different projects that realize a fine-tuning of the BERT model. All try to use **DistilBERT** to make learning fast.
