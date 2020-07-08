@@ -31,7 +31,7 @@ You must create three directories: 'train', 'test', 'valid' and distribute the c
 
 - [Transformer language model (GPT-2) with sentencepiece tokenizer](https://github.com/lopuhin/transformer-lm#id1)
 
-### Prepare data fro training
+### Prepare data for training
 
 Change directory to:
 
@@ -150,3 +150,53 @@ La técnica que presenta este repositorio es usar un modelo BERT, adaptando sus 
 Este proyecto es una investigación para ver cómo resolver el problema de **Q&A** en el contexto de ayuda de Linux (la utilidad `man`). Quizá se pueda presentar el problema como **Q&A** o como **translate** u otro sistemas. También hay que investigar cómo enseñar los manuales de `man`: una opción es entrenar de cero un BERT, otra sería reentrenar el BERT con los manuales(añadir más textos al modelo), la otra opción sería meter los manuales como entrada de la pregunta (esto requeriría detectar en un paso previo qué manual requiere la pregunta)
 
 Este repo es un **BERT** implementado en **C++** portable -> [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)
+
+# NLP with C++
+
+This is a set of investigations of several NLP projects made in C++. All are made in try (.gitignored)
+
+[NLP C++ projects list on Github](https://git- hub.com/keon/awesome-nlp#user-content-c++)
+
+## MITIE: library and tools for information extraction
+Este proyecto tiene buenas utilidades y parece fácil de compilar he integrar con otras apps C++. Su principal función es el **NER** *(Near Entity Recognition)*, detecta palabras que son: organizaciones, localizaciones, nombres, y otros tipos de entidades.
+
+[github(mit-nlp/MITIE)](https://github.com/mit-nlp/MITIE)
+
+La licencia permite el uso comercial. Tienes herramientas de entrenamiento, falta algo de documentación y ayuda para correr los ejemplos.
+
+### sample ner_stream
+
+From:
+
+    A Pegasus Airlines plane landed at an Istanbul airport Friday after a passenger "said that there was a bomb on board" 
+    and wanted the plane to land in Sochi, Russia, the site of the Winter Olympics, said officials with Turkey's 
+    Transportation Ministry.
+
+Generates:
+
+    A [ORGANIZATION Pegasus Airlines] plane landed at an [LOCATION Istanbul] airport Friday after a passenger " 
+    said that there was a bomb on board " and wanted the plane to land in [LOCATION Sochi] , [LOCATION Russia] , 
+    the site of the Winter Olympics , said officials with [LOCATION Turkey] 's [ORGANIZATION Transportation Ministry] . 
+
+## Unicode tokeniser. Ucto tokenizes text files
+Este proyecto hace tokenizacion
+
+[github(LanguageMachines/ucto)](https://github.com/LanguageMachines/ucto)
+
+Tiene varias dependencias. Es mejor evitar integrar esto en AAI
+
+## meta: A Modern C++ Data Sciences Toolkit
+Este proyecto tiene multiples utilidaes: tokenizacion, clasificación...
+
+[github(meta-toolkit/meta)](https://github.com/meta-toolkit/meta)
+
+[meta: more info](https://meta-toolkit.org)
+
+Da problemas de compilación.
+
+## Starspace
+Este proyecto merece la pena estudiarlo, al menos por su red neural en c++ (si realmente la tiene)
+
+[facebookresearch/StarSpace](https://github.com/facebookresearch/StarSpace)
+
+Require boost
