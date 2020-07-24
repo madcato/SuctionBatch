@@ -1,3 +1,6 @@
 code/data
 transformer-lm/run-root/
 try
+._*
+qa/SQUAD
+.DS_Store
