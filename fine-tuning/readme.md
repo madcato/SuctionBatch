@@ -6,6 +6,10 @@ All use this project: [github(huggingface/transformers)](https://github.com/hugg
 
 - First install and read the instruction to train models from: [transformers installation](https://github.com/huggingface/transformers#run-the-examples)
 
+### Conclusion
+
+The adaptation takes the token output (embedding) and uses it as the input of other network.
+
 ## Projects
 
 List of projects and its subdirectory:

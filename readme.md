@@ -2,6 +2,8 @@
 
 This project is an adaptation of the GTP2 ML algorithm to learn code instea of news articles.
 
+* Follow this link to see a sample implementation of Trasnformer: [Transformer model for language understanding](https://www.tensorflow.org/tutorials/text/transformer)
+
 ## Prerequesites
 
 - Ruby
@@ -139,17 +141,17 @@ circle inposition x: 45.3 y: 22.9 radius: 5.0
 
 # Submodulo transformers
 
-Este submodulo es una adaptación de un transformador BERT para detectar frases tóxicas.
+This submodule is a BERT transformer adaptation to detect toxic phrases.
 
     $ git submodule add git@github.com:madcato/transformers.git
 
-La técnica que presenta este repositorio es usar un modelo BERT, adaptando sus salidas y entradas para resolver un problema de clasificación, para el que originalmente no estaba entrenado.
+The technique in this repository is to use a BERT model, adapting its inputs/outputs to solve a text classification model, wich originally was not trained.
 
 # Transformer-man
 
-Este proyecto es una investigación para ver cómo resolver el problema de **Q&A** en el contexto de ayuda de Linux (la utilidad `man`). Quizá se pueda presentar el problema como **Q&A** o como **translate** u otro sistemas. También hay que investigar cómo enseñar los manuales de `man`: una opción es entrenar de cero un BERT, otra sería reentrenar el BERT con los manuales(añadir más textos al modelo), la otra opción sería meter los manuales como entrada de la pregunta (esto requeriría detectar en un paso previo qué manual requiere la pregunta)
+This project is an investigation to solve a **Q&A** in the Linux manual context (`man` utility). Maybe can be presented as a **Q%A** solutions or a **translate** or other system. Also I must investigate how to train `man` manuals: one possibility is to train a BERT from zero, another is adapt a BERT with the manuals (adding more texts to model), another option would be to put the manual as part of the input (this requires to find the manual page before adding it)
 
-Este repo es un **BERT** implementado en **C++** portable -> [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)
+This is a **BERT** repo implemented portable **C++** -> [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)
 
 # NLP with C++
 
@@ -158,11 +160,11 @@ This is a set of investigations of several NLP projects made in C++. All are mad
 [NLP C++ projects list on Github](https://git- hub.com/keon/awesome-nlp#user-content-c++)
 
 ## MITIE: library and tools for information extraction
-Este proyecto tiene buenas utilidades y parece fácil de compilar he integrar con otras apps C++. Su principal función es el **NER** *(Near Entity Recognition)*, detecta palabras que son: organizaciones, localizaciones, nombres, y otros tipos de entidades.
+This project contains good utilities and it seems easy to integrate with other C++ projects. It proncipal operation is the **NER* *(Near Entity Recognition)*, it detects words like: organizatoins, places, names, and oother types of entities.
 
 [github(mit-nlp/MITIE)](https://github.com/mit-nlp/MITIE)
 
-La licencia permite el uso comercial. Tienes herramientas de entrenamiento, falta algo de documentación y ayuda para correr los ejemplos.
+Comercial use allowed. It has training code, lacks a bit of documentation and some help to run the samples.
 
 ### sample ner_stream
 
@@ -179,23 +181,22 @@ Generates:
     the site of the Winter Olympics , said officials with [LOCATION Turkey] 's [ORGANIZATION Transportation Ministry] . 
 
 ## Unicode tokeniser. Ucto tokenizes text files
-Este proyecto hace tokenizacion
+This project to **tokenization**.
 
 [github(LanguageMachines/ucto)](https://github.com/LanguageMachines/ucto)
 
-Tiene varias dependencias. Es mejor evitar integrar esto en AAI
+It has some dependencies.
 
 ## meta: A Modern C++ Data Sciences Toolkit
-Este proyecto tiene multiples utilidaes: tokenizacion, clasificación...
+This project has some utilities: **tokenization**, **classification**,...
 
 [github(meta-toolkit/meta)](https://github.com/meta-toolkit/meta)
 
 [meta: more info](https://meta-toolkit.org)
 
-Da problemas de compilación.
+Compiling problems
 
 ## Starspace
-Este proyecto merece la pena estudiarlo, al menos por su red neural en c++ (si realmente la tiene)
 
 [facebookresearch/StarSpace](https://github.com/facebookresearch/StarSpace)
 
