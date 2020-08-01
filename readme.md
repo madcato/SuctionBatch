@@ -1,6 +1,6 @@
 # SuctionBatch
 
-This project is an adaptation of the GTP2 ML algorithm to learn code instea of news articles.
+This project is an adaptation of the GTP2 ML algorithm to learn code instead of news articles.
 
 * Follow this link to see a sample implementation of Trasnformer: [Transformer model for language understanding](https://www.tensorflow.org/tutorials/text/transformer)
 
