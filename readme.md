@@ -203,5 +203,37 @@ Compiling problems
 Require boost
 
 # Fine-tuning BERT
-
 In directory *./fine-tuning* there are 5 different projects that realize a fine-tuning of the BERT model. All try to use **DistilBERT** to make learning fast.
+
+# Q&A
+En el directorio `qa` incluyo un proyecto para realizar un **Q&A** destinado a servir como buscador de información de TMB. Este proyecto se usa en el proyecto TMBInfo como motor de búsqueda.
+
+- [Sample code from which generated my code](https://github.com/huggingface/transformers/tree/master/examples/question-answering)
+
+## Run 
+
+    export SQUAD_DIR=./SQUAD
+    
+    python3 run_squad.py \
+      --model_type bert \
+      --model_name_or_path bert-base-uncased \
+      --do_train \
+      --do_eval \
+      --do_lower_case \
+      --train_file $SQUAD_DIR/train-v1.1.json \
+      --predict_file $SQUAD_DIR/dev-v1.1.json \
+      --per_gpu_train_batch_size 12 \
+      --learning_rate 3e-5 \
+      --num_train_epochs 2.0 \
+      --max_seq_length 384 \
+      --doc_stride 128 \
+      --output_dir ./debug_squad/
+
+## Sample usage
+
+### Load
+- [From this post](https://qa.fastforwardlabs.com/pytorch/hugging%20face/wikipedia/bert/transformers/2020/05/19/Getting_Started_with_QA.html)
+
+  Run `$ python3 sample.py`
+- [Find pre-trained models here](https://huggingface.co/models)
+
